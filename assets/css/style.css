@@ -4,7 +4,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     color: #777777;
-    background: #ffffff; /* add image */
+    background: #ffffff url("../images/concrete_seamless.png") repeat;
     font: normal 1.2em 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
@@ -109,11 +109,33 @@ button {
     text-align: center;
 }
 
+.flexbox {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.img-container {
+    position: relative;
+    margin: 1em 2em 1.5em 0em;
+    text-align: center;
+}
+
+.img-text {
+    position: absolute;
+    bottom: 0.6em;
+    padding: 0.8em 0em;
+    width: 100%;
+    color: #ffffff;
+    background-color: #4aaaa5;
+    font: normal 1.2em 'Georgia', Times, 'Times New Roman', serif;
+}
+
+.img-empty {
+    width: 275px;
+}
+
 /* to do:
-    flex the images on portfolio
     text-links/nav links/button hover interactions
-    background pattern
-    portfolio placeholders
     picture on about page
     write 2 paragraphs about self
     put my name down
