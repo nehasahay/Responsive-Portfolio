@@ -21,7 +21,7 @@ header {
 
 h1 {
     float: left;
-    margin: 0em -1em; /* idk why this is offset */
+    margin: 0em -1em; /* no idea why this is offset */
     padding: 1em 1.4em;
     color: #ffffff;
     background-color: #4aaaa5;
@@ -45,12 +45,17 @@ nav a:last-child {
     border: none;
 }
 
-/* sticky footer solution here seems inelegant
+/* sticky footer solution here seems inelegant, but it works
    is there another way besides a flex container for main? */
 #flex {
     flex-grow: 1;
 }
 
+/* I'm not sure why this content area is bigger than the sample. screen res?
+   after experimenting, I'm pretty sure the pictures were taken after changing
+   the body font-size to 1.1em and forgetting to resize the main container,
+   etc. this would explain why I couldn't get the same alignment on the
+   portfolio without empty container hacks as well */
 main {
     margin: 2em auto;
     padding: 0.5em 1.5em 1em;
@@ -79,12 +84,21 @@ h2 {
     font: bold 1.5em 'Georgia', Times, 'Times New Roman', serif;
 }
 
-p {
-    line-height: 2em;
-}
-
 a:hover {
     color: #4aaaa5;
+}
+
+a img:hover {
+    border: 0.2em solid #4aaaa5;
+}
+
+#profile {
+    float: left;
+    margin: 0.6em 1.2em 0em 0em;
+}
+
+p {
+    line-height: 2em;
 }
 
 input, textarea {
@@ -107,6 +121,11 @@ button {
     border: none;
     font-size: 0.9em;
     text-align: center;
+    transition: background-color 2s;
+}
+
+button:hover {
+    background-color: #666666;
 }
 
 .flexbox {
@@ -131,13 +150,6 @@ button {
 }
 
 .img-empty {
+    /* an incredibly hacky way to get the same alignment as the sample */
     width: 275px;
 }
-
-/* to do:
-    text-links/nav links/button hover interactions
-    picture on about page
-    write 2 paragraphs about self
-    put my name down
-    why is my content area bigger than the picture? even with 960px
-*/
